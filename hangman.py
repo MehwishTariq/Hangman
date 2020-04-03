@@ -41,7 +41,7 @@ def check(word_pc):
     '''
     j=0
     while(j<4):
-         user_word=word_input()
+         user_word=word_input().lower()
          if user_word==word_pc and j<3:
                 print("\nCorrect! you won :)")
                 break
