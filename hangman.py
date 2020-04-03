@@ -58,7 +58,6 @@ def play():
     '''
     this function is only used to call all the functions for the game
     '''
-    #global word_pc
     word_pc=rd.choice(list(words))   
     random_hints(word_pc)  
     sentence_hint(word_pc)
