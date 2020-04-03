@@ -9,7 +9,7 @@ def word_input():
     user_word=input()
     return user_word
 
-def random_hints():
+def random_hints(word_pc):
     '''
     This function is the main function that takes in random letters from the word and displays them as hints and leave some letter places blank to guess 
     '''
@@ -28,14 +28,14 @@ def random_hints():
             hint.append('__')
     print("\n\t\t\t"+ str(hint))
 
-def sentence_hint():
+def sentence_hint(word_pc):
     '''
     This function only shows the hint
     '''
     print("\nHINT:")
     print(words.get(word_pc))     
 
-def check():
+def check(word_pc):
     '''
     This functions checks the user input with the original word
     '''
@@ -58,11 +58,11 @@ def play():
     '''
     this function is only used to call all the functions for the game
     '''
-    global word_pc
+    #global word_pc
     word_pc=rd.choice(list(words))   
-    random_hints()  
-    sentence_hint()
-    check()
+    random_hints(word_pc)  
+    sentence_hint(word_pc)
+    check(word_pc)
     play_again()
           
 def play_again():
